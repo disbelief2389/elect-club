@@ -4,17 +4,33 @@
 			window.location.hostname === "localhost" ||
 			window.location.hostname === "127.0.0.1";
 		const base = document.createElement("base");
-		base.href = isLocal ? "/" : "/mcfarmarchive/";
+		base.href = isLocal ? "/" : "/elect_club/";
 		document.head.appendChild(base);
 	})();
+
+	document.addEventListener("DOMContentLoaded", () => {
+		// Dynamically change styles dependant on current page
+		const pathName = window.location.pathname;
+		if (pathName.endsWith("/") || pathName.endsWith("/index.html")) {
+			document.getElementById("index").classList.add("active");
+		} else if (pathName.endsWith("/about.html")) {
+			document.getElementById("about").classList.add("active");
+		} else if (pathName.endsWith("/projects.html")) {
+			document.getElementById("projects").classList.add("active");
+		} else if (pathName.endsWith("/join.html")) {
+			document.getElementById("join").classList.add("active");
+		} else {
+			throw new Error(`${pathName} does not match criteria.`);
+		}
+	});
 </script>
 <nav>
 	<ul id="nav-list">
-		<li><a href="index.html">elect_club</a></li>
+		<li><a href="index.html" id="index">elect_club</a></li>
 		<div class="nav-links">
-			<li><a href="pages/farms.html">Farms</a></li>
-			<li><a href="pages/about.html">About</a></li>
-			<li><a href="pages/contact.html">Contact</a></li>
+			<li><a href="pages/about.html" id="about">About</a></li>
+			<li><a href="pages/projects.html" id="projects">Projects</a></li>
+			<li><a href="pages/join.html" id="join">Join</a></li>
 		</div>
 	</ul>
 </nav>

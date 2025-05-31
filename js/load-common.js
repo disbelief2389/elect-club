@@ -19,3 +19,25 @@ document.addEventListener("DOMContentLoaded", () => {
 	loadHTML("navbar", "navbar.html");
 	loadHTML("footer", "footer.html");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+	const currPage = getCurrPage();
+	addActive(currPage);
+});
+
+function getCurrPage() {
+	const pathName = window.location.pathname;
+	if (pathName.endsWith("/") || pathName.endsWith("/index.html")) {
+		return "index";
+	} else if (pathName.endsWith("/about.html")) {
+		return "about";
+	} else if (pathName.endsWith("/projects.html")) {
+		return "projects";
+	} else if (pathName.endsWith("/join.html")) {
+		return "join";
+	} else {
+		return null;
+	}
+}
+
+function addActive(currPage) {}
