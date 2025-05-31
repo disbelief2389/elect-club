@@ -64,6 +64,8 @@ ul#nav-list {
 	justify-content: space-between;
 	align-items: center;
 	a {
+		user-select: none;
+		-moz-user-select: none;
 		text-transform: lowercase;
 		padding: 0.3rem 0.5rem;
 		border: 1px solid transparent;
