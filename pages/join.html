@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" class="dirt-background">
+	<head>
+		<script>
+			(function () {
+				const isLocal =
+					window.location.hostname === "localhost" ||
+					window.location.hostname === "127.0.0.1";
+				const base = document.createElement("base");
+				base.href = isLocal ? "/" : "/elect_club/";
+				document.head.appendChild(base);
+			})();
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<title>elect_club</title>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div id="navbar"></div>
+
+		<main>
+			<h1>Join</h1>
+		</main>
+		<div id="footer"></div>
+		<script src="js/load-common.js"></script>
+	</body>
+</html>
