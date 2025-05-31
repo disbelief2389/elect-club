@@ -1,0 +1,88 @@
+/* Variables */
+:root {
+	--g-spacing: 1rem;
+}
+
+/* Initial setup */
+* {
+	font-family: "JetBrains Mono", monospace !important;
+	color: green;
+	&::selection {
+		background-color: green;
+		color: black;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #000;
+}
+
+main {
+	padding: var(--g-spacing);
+	margin: 0 var(--g-spacing);
+	border: 1px solid green;
+}
+
+img,
+picture,
+video {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+span.italic {
+	font-style: italic;
+}
+
+hr {
+	margin: var(--g-spacing) auto;
+}
+
+nav {
+	padding: var(--g-spacing) 0;
+	margin: 0 var(--g-spacing);
+}
+
+ul#nav-list {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	align-items: center;
+	a {
+		text-transform: lowercase;
+		padding: 0.3rem 0.5rem;
+		border: 1px solid transparent;
+		text-decoration: none;
+		&:hover {
+			border-color: rgba(0, 128, 0, 0.342);
+		}
+	}
+}
+
+div.nav-links {
+	display: flex;
+	gap: 0;
+}
+
+footer {
+	padding: 2rem;
+	margin: var(--g-spacing);
+	border: 1px solid green;
+	display: flex;
+	justify-content: center;
+}
