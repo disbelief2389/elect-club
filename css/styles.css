@@ -11,6 +11,8 @@
 		background-color: green;
 		color: black;
 	}
+	scrollbar-width: thin;
+	scrollbar-color: #008000 #0010008e;
 }
 
 *,
@@ -19,6 +21,27 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+	width: 10px; /* Controls vertical scrollbar width (thin) */
+	height: 10px; /* Controls horizontal scrollbar height (thin) */
+}
+
+::-webkit-scrollbar-track {
+	background: #0010008e; /* Very dark green (near black) */
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #008000; /* Pure green */
+	border-radius: 5px;
+	border: 1px solid #0010008e; /* Matches track color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #00a000; /* Slightly lighter green on hover */
 }
 
 body {
