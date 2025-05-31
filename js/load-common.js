@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		window.location.hostname === "localhost" ||
 		window.location.hostname === "127.0.0.1";
 	const base = document.createElement("base");
-	base.href = isLocal ? "/" : "/elect_club/";
+	base.href = isLocal ? "/" : "/elect-club/";
 	document.head.appendChild(base);
 
 	// Then load navbar and set active class
