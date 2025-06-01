@@ -103,6 +103,9 @@ ul#nav-list {
 		&:hover {
 			border-color: rgba(0, 128, 0, 0.342);
 		}
+		&:active {
+			border-color: green;
+		}
 	}
 }
 
