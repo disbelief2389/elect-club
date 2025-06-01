@@ -142,7 +142,6 @@ form {
 	padding: 1rem;
 	border: 1px solid green;
 	gap: 1rem;
-
 	textarea {
 		max-width: 100%;
 		min-width: 100%;
@@ -155,9 +154,11 @@ form {
 		&:focus {
 			outline: 2px solid #00ff00;
 		}
-		text-transform: uppercase;
 		font-size: smaller;
-		letter-spacing: 0.2rem;
+		&::placeholder {
+			text-transform: uppercase;
+			letter-spacing: .2rem;
+		}
 	}
 	input.name-in {
 		width: 33%;
@@ -168,6 +169,8 @@ form {
 	button.submit {
 		align-self: center;
 		width: 60px;
+		letter-spacing: .2rem;
+		text-transform: uppercase;
 		&:hover {
 			cursor: pointer;
 			border-color: #00ff00;
