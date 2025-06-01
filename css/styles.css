@@ -109,11 +109,27 @@ footer {
 	margin: var(--g-spacing);
 	border: 1px solid green;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	gap: .5rem;
 }
 
 a.active {
 	color: #00ff00;
 	border-bottom: 1px solid #00ff00 !important;
 	font-weight: bold;
+}
+
+ul,
+ol {
+	list-style-position: inside;
+}
+
+p:not(footer p),
+li {
+	margin-bottom: 1rem;
+}
+
+footer p {
+	text-align: center;
 }
