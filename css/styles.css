@@ -111,7 +111,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: .5rem;
+	gap: 0.5rem;
 }
 
 a.active {
@@ -132,4 +132,58 @@ li {
 
 footer p {
 	text-align: center;
+}
+
+form {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+	padding: 1rem;
+	border: 1px solid green;
+	gap: 1rem;
+
+	textarea {
+		max-width: 100%;
+		min-width: 100%;
+	}
+	* {
+		background-color: transparent;
+		border: 1px solid green;
+		padding: 0.25rem 0.5rem;
+		&:focus {
+			outline: 2px solid #00ff00;
+		}
+		text-transform: uppercase;
+		font-size: smaller;
+		letter-spacing: 0.2rem;
+	}
+	input.name-in {
+		width: 33%;
+	}
+	input.email-in {
+		width: 66%;
+	}
+	button.submit {
+		align-self: center;
+		width: 60px;
+		&:hover {
+			cursor: pointer;
+			border-color: #00ff00;
+			color: #00ff00;
+		}
+		&:active {
+			cursor: default;
+			border-color: 1px solid green;
+			color: green;
+		}
+		&:focus {
+			border: 1px solid green;
+		}
+	}
+}
+
+img#main-svg {
+	max-width: 300px;
+	margin: 3rem auto;
 }
