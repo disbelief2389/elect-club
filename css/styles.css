@@ -135,7 +135,7 @@ footer p {
 }
 
 form {
-	margin: 0 auto;
+	margin: 5rem auto;
 	display: flex;
 	flex-direction: column;
 	max-width: 500px;
